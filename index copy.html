@@ -1,108 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="icons/logo.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenBrine - Sustainable Solutions</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
-
-        .showcase {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .showcase video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .showcase .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-        }
-
-        .showcase .text {
-            position: relative;
-            z-index: 10;
-            color: white;
-            text-align: center;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .showcase .text h2 {
-            font-size: 48px;
-        }
-
-        .showcase .text p {
-            font-size: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #004b87;
-            padding: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 40px 0;
-        }
-
-        .section {
-            margin: 80px 0;
-            padding: 40px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
         .section h2 {
-            color: #004b87;
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
-
-        .section p {
-            font-size: 20px;
+        .section p, .section ul {
+            font-size: 1.2rem;
             line-height: 1.6;
-            color: #333;
         }
-
-        .footer {
-            background: #004b87;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            font-size: 20px;
+        .section ul {
+            padding-left: 20px;
+        }
+        .section ul li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -113,72 +34,62 @@
         <div class="text">
             <img src="icons/logo.png" alt="GreenBrine Logo" style="width: 150px;">
             <h2>GreenBrine</h2>
-            <h3>Transforming Waste into Value</h3>
-            <p>Innovative solutions to capture CO₂, produce clean hydrogen, and recover valuable minerals for a sustainable future.</p>
-        </div>
-        <div style="text-align: center; margin-top: 20px;"></div>
-            <a href="#problem" style="background: #004b87; color: white; padding: 15px 30px; text-decoration: none; font-size: 20px; border-radius: 5px;">Explore</a>
+            <h3>From Waste to Worth</h3>
+            <p>Transforming brine from desalination into valuable resources while protecting marine ecosystems and reducing CO₂ emissions.</p>
+            <div style="text-align: center; margin-top: 37px;"></div>
+            <a href="#problem" style="background: #ffffff; color: rgb(0, 0, 0); padding: 15px 30px; text-decoration: none; font-size: 20px; border-radius: 5px;">Explore</a>
+        <script>
+            document.querySelector('a[href="#problem"]').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector('#problem').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
         </div>
     </section>
 
     <div class="container">
-        <section id="problem" class="section" style="display: inline-block; width: 30%; vertical-align: top;">
+        <section id="problem" class="section">
             <h2>The Problem</h2>
-            <p>Rising CO₂ levels cause global warming and ocean acidification, threatening marine life. Desalination plants discharge massive amounts of brine, harming biodiversity and wasting valuable resources.</p>
+            <p>Climate change is accelerating due to rising CO₂ levels, leading to ocean acidification and global warming. Desalination plants release vast amounts of brine, harming marine biodiversity and wasting valuable minerals.</p>
         </section>
 
         <section id="solution" class="section">
             <h2>Our Solution</h2>
-            <p>GreenBrine offers a revolutionary system that extracts CO₂ from seawater, produces clean hydrogen (H₂), and recovers magnesium from brine waste, promoting a circular economy.</p>
+            <p>GreenBrine offers an innovative treatment station that transforms brine from desalination into **magnesium hydroxide** and **calcium carbonate** using advanced electrolysis and filtration techniques.</p>
             <ul>
-                <li><strong>Electrolysis:</strong> Converts brine to hydrogen (H₂) and sodium hydroxide (NaOH).</li>
-                <li><strong>CO₂ Capture:</strong> NaOH reacts with CO₂, forming bicarbonates.</li>
-                <li><strong>Magnesium Extraction:</strong> Recovers magnesium from treated brine.</li>
+                <li><strong>Electrolysis:</strong> Extracts magnesium hydroxide from brine.</li>
+                <li><strong>Filtration:</strong> Produces high-purity calcium carbonate.</li>
             </ul>
-        </section>
-
-        <section id="market" class="section">
-            <h2>Market Opportunity</h2>
-            <p>Green energy and material recovery are growing industries with immense potential.</p>
-            <div class="market">
-                <div>
-                    <h3>Hydrogen</h3>
-                    <p>Valued at $300-500/kg, with increasing global demand.</p>
-                </div>
-                <div>
-                    <h3>CO₂ Credits</h3>
-                    <p>Traded at $50-100/tonne in expanding carbon markets.</p>
-                </div>
-                <div>
-                    <h3>Magnesium</h3>
-                    <p>Essential for alloys, batteries, and construction, worth $2,000-3,000/tonne.</p>
-                </div>
-            </div>
         </section>
 
         <section id="impact" class="section">
             <h2>Our Environmental Impact</h2>
-            <div class="impact">
-                <div>
-                    <h3>CO₂ Reduction</h3>
-                    <p>Captures 79 tonnes/day, equivalent to offsetting emissions from 17,000 cars.</p>
-                </div>
-                <div>
-                    <h3>Renewable Energy</h3>
-                    <p>Powered by solar or wind, ensuring a net-zero process.</p>
-                </div>
-            </div>
+            <ul>
+                <li><strong>Protects marine ecosystems</strong> by reducing brine discharge.</li>
+                <li><strong>Reduces CO₂ emissions</strong> through carbonic acid reduction.</li>
+                <li><strong>Promotes a circular economy</strong> by utilizing waste resources.</li>
+            </ul>
+        </section>
+
+        <section id="products" class="section">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>🌱 **Magnesium Hydroxide** - Used in wastewater treatment and flame retardants.</li>
+                <li>🏗 **Calcium Carbonate** - Essential for construction and industrial applications.</li>
+            </ul>
         </section>
 
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>Email: Green.BRINE@gmail.com</p>
-            <p>LinkedIn: Green.BRINE@linkedln.ma</p>
-            <p>Tel: +21261472274</p>
+            <p>Tel: +212 614 972 274</p>
         </section>
     </div>
 
     <footer class="footer">
+        <div style="text-align: center;">
+            <img src="icons/logo.png" alt="GreenBrine Logo" style="width: 150px; height: auto;">
+        </div>
         <p>&copy; 2025 GreenBrine. All Rights Reserved.</p>
     </footer>
 </body>
